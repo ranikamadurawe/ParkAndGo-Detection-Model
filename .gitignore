@@ -93,5 +93,6 @@ ENV/
 *.hdf5
 
 images
-test
 test_vid
+test
+model_frcnn.hdf5

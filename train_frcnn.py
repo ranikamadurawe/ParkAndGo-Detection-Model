@@ -16,7 +16,7 @@ import keras_frcnn.roi_helpers as roi_helpers
 from keras.utils import generic_utils
 from keras_frcnn.simple_parser import get_data
 from keras_frcnn import resnet as nn
-
+from tempfile import TemporaryFile
 sys.setrecursionlimit(40000)
 
 #location of the data files to train contains bounding box information and class details

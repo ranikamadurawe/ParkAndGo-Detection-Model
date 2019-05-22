@@ -1,0 +1,6 @@
+Flask==1.0.2
+Keras==2.0.3
+keras-resnet==0.1.0
+opencv-python==4.0.0.21
+scikit-image==0.13.1
+requests
