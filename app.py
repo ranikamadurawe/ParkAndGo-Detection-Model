@@ -108,14 +108,14 @@ def loadmodel():
     feature_map_input = Input(shape=input_shape_features)
 
     # define the base network (resnet here, can be VGG, Inception, etc)
-    shared_layers = nn.nn_base(img_input, trainable=True)
+    shared_layers = nn.nn_base(img_input, trainable=False)
 
     # define the RPN, built on the base layers
     num_anchors = len(C.anchor_box_scales) * len(C.anchor_box_ratios)
     rpn_layers = nn.rpn(shared_layers, num_anchors)
 
     classifier = nn.classifier(feature_map_input, roi_input, C.num_rois, nb_classes=len(class_mapping),
-                               trainable=True)
+                               trainable=False)
 
     model_rpn = Model(img_input, rpn_layers)
     model_classifier_only = Model([feature_map_input, roi_input], classifier)
@@ -146,13 +146,11 @@ def detect():
     for resp in resps:
         print(resp)
         with graph.as_default():
-            all_imgs = []
 
-            classes = {}
 
             bbox_threshold = 0.7
 
-            visualise = True
+
             vcap = cv2.VideoCapture(resp)
             ret, img = vcap.read()
             st = time.time()
