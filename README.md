@@ -75,7 +75,7 @@ kubectl expose deployment cuda --type=LoadBalancer --port 80 --target-port 5000
 
 ```
 
-Use the following command to get the EXTERNAL_IP of the created port
+Use the following command to get the EXTERNAL_IP of the created services
 
 ```
 kubectl get services
