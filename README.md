@@ -1,8 +1,14 @@
 # ParkAndGo-Detection-Model
 
+![pandgo](resources/icon_small.png) 
+
 ## Introduction
 
 This ParkAndGo solution intends to utlize the Faster RCNN Object Detection Model to analyze CCTV Footage and identify free and occupied Parking Spaces. These locations will be updated in firebase realtime database where they will be shown to prospective users through an Ionic Mobile App or an Angular Web App
+
+## High-Level Architecture Diagram
+
+![arci](resources/architecture_model.png)
 
 ## Installation Steps
 
