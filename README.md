@@ -16,7 +16,9 @@ This ParkAndGo solution intends to utlize the Faster RCNN Object Detection Model
 
 Install all required prerequisites by issuing the command
 
-`pip install requirement.txt`
+```
+pip install -r requirement.txt
+```
 
 Download the weight file from here and place it in the root directory
 
@@ -24,13 +26,17 @@ Download the weight file from here and place it in the root directory
 
 To run the server locally issue the following command. The flask application will listen on port 5000
 
-`python app.py`
+```
+python app.py
+```
 
 ### Running the Server using Containers or through Kubernetes
 
 Optionally to run the server as a container issue the following command to generate a Docker Container
 
-`docker build --tag <container_name>:1.0 .`
+```
+docker build --tag <container_name>:1.0 .
+```
 
 To run the above container in a GPU enabled Kubernetes Cluster issue the following commands
 
